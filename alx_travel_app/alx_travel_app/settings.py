@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Initialize environment variables
 env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))  # This will look for a file named .env in your project root
+environ.Env.read_env(os.path.join(BASE_DIR.parent, '.env'))  # This will look for a file named .env in your project root
 
 
 # Quick-start development settings - unsuitable for production
@@ -63,7 +63,7 @@ MIDDLEWARE = [
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-ROOT_URLCONF = 'alx_travel_app.urls'
+ROOT_URLCONF = 'alx_travel_app.alx_travel_app.urls'
 
 TEMPLATES = [
     {
@@ -80,7 +80,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'alx_travel_app.wsgi.application'
+WSGI_APPLICATION = 'alx_travel_app.alx_travel_app.wsgi.application'
 
 
 # Database
